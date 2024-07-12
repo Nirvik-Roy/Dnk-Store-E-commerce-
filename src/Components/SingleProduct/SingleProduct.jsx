@@ -4,10 +4,22 @@ import API_DATA from "../../Api"
 import Navbar2 from '../Navbar/Navbar2'
 import './SingleProduct.scss'
 import shoe from '../../assets/sports-shoe1-600x600.jpg'
+import { useDispatch, useSelector } from 'react-redux'
+import { addElement } from '../../Store/Slices/Slices'
 const SingleProduct = () => {
+
+  const data=useSelector((state)=>{ //Very important steps//
+    return state.cart
+  })  
+
+  console.log(data) //this one too//
+
   const [product,setproduct]=useState([])
+  const [Color,setColor]=useState('')
+  const [quantity,setQuantity]=useState(1)
   const [Index,setIndex]=useState(0)
   const {id}=useParams()
+  const dispatch=useDispatch()
   const Api=API_DATA
  const Single_product =()=>{
   let filter_data=Api.filter((element)=>{
@@ -20,6 +32,26 @@ const SingleProduct = () => {
  },[])
  const setIndexFun =(i)=>{
   setIndex(i)
+ }
+ const getQuantity=(e)=>{
+ setQuantity(e.target.value)
+ }
+ const getColor=(e)=>{
+  setColor(e)
+ }
+ const productDetails=(cartitem)=>{
+   const obj={
+    id:cartitem.id,
+    title:cartitem.title,
+    img:cartitem.image,
+    quantity:quantity,
+    price:cartitem.price,
+    color:Color,
+    total:cartitem.price*quantity,
+    image:cartitem.image
+   }
+   dispatch(addElement(obj))
+   console.log(cartitem.image)
  }
   return (
     <>
@@ -47,11 +79,38 @@ const SingleProduct = () => {
          
       </div>
     </div>
+     <div className='right_singleproduct_div'>
+      <div className='singleproduct_details_div'>
+        <a>Home/</a><a>Men/</a><a>{e.title}</a>
+        <p className='mt-4 text-uppercase'>{e.category}</p>
+        <h1>{e.title}</h1>
+        <h2 className='d-inline'>${e.price}</h2><span className='fs-5'> +Free Shipping</span>
+        <p className='mt-3 product_description'>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit sed.</p>
+        <div className='color_div_main'>
+        {e.color.map((ele)=>(
+          <button onClick={(()=>getColor(ele))} className='color_btn_main btn mt-3' style={{backgroundColor:ele}}></button>
+        ))}
+        </div>
+        <hr className='mt-5'></hr>
+        <div>
+          <input className='quantity_input' type='number' onChange={((event)=>getQuantity(event))} defaultValue={1} min={1} max={25}></input>
+          <button onClick={(()=>productDetails(e))} className='btn btn-primary btn_add_to_cart'>ADD TO CART</button>
+          <hr></hr>
+        </div>
+        <span>SKU: N/A</span>
+        <span className='ms-3'>Category: Men</span>
+      </div>
+     </div>
+
     </>    
         })}
         
-          <div className='right_singleproduct_div'></div>
+          
         </div>
+       
+      </div>
+      <div className='d-flex justify-content-center'>
+      <hr className='hr_line'/>
       </div>
      </section>
     </>
