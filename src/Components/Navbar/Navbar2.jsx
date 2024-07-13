@@ -4,6 +4,7 @@ import nav_logo from '../../assets/favicon-free-img-120x120.png'
 import { useDispatch, useSelector } from 'react-redux'
 import shoe from "../../assets/sports-shoe1-300x300.jpg"
 import { removeElement } from '../../Store/Slices/Slices'
+import { Link } from 'react-router-dom'
 const Navbar2 = () => {
   const [modal,showmodal]=useState(false)
   let dispatch =useDispatch()
@@ -74,7 +75,7 @@ const Navbar2 = () => {
               </div>
             </div>
             </div>
-            <hr/>
+            <hr className='hr_Line'/>
           </>
          })}
 
@@ -82,7 +83,20 @@ const Navbar2 = () => {
           </div>
           
         </div>
-     
+        <hr className='mb-3 mt-0' ></hr>
+         <div className='subtotal_div'>
+           <div className= ' subtotal_main d-flex justify-content-between'>
+            <h5>SubTotal:</h5>
+            <p>${sum}.00</p>
+           </div>
+         </div>
+         <hr className='mt-0'/>
+         <div className='button_wrapper d-flex justify-content-center'>
+          <div className='button_divs'>
+            <Link to={'/cart'} className='view_cart_btn d-flex justify-content-center align-items-center text-light'>VIEW CART</Link>
+            <div className='checkout_btn d-flex justify-content-center align-items-center text-light'>CHECKOUT</div>
+          </div>
+         </div>
       </div>
       
     </>
