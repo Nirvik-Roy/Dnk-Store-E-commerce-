@@ -10,3 +10,6 @@
  html::-webkit-scrollbar{
   display: none;
  }
+.active{
+  color: rgb(8, 136, 240);;
+}

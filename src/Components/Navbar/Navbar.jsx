@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.scss'
 import nav_logo from '../../assets/logo1-free-img-140x47.png'
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Navbar = () => {
           </div>
           <div className='nav_categories_main'>
             <div className='nav_categories_list'>
-              <a>EveryThing</a>
+              <NavLink className='nav_link' to={'/everything'}>EveryThing</NavLink>
               <a>Women</a>
               <a>Accesecories</a>
             </div>

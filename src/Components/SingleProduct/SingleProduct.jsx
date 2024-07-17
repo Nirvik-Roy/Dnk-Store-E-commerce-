@@ -12,6 +12,7 @@ const SingleProduct = () => {
     return state.cart
   })  
 
+ //this one too//
   console.log(data) //this one too//
 
   const [product,setproduct]=useState([])

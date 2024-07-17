@@ -22,10 +22,22 @@ const cartSlice = createSlice({
             }
         },
         removeElement(state,action){
-       let exist=state.map((e)=>e.id==action.payload)
-       state.splice(state.indexOf(exist),1)
+           let itemExist= state.find((item)=>{
+             return item.id==action.payload
+           })
+           if(itemExist){
+           state.splice(state.indexOf(itemExist),1)
+           }
         },
-        updateElement(){},
+        updateElement(state,action){
+            let itemExist = state.find((item)=>{
+               return item.id==action.payload.id
+            })
+            if(itemExist){
+                itemExist.quantity=action.payload.quan
+                itemExist.total=action.payload.Price*action.payload.quan
+            }
+        },
     }
 })
 

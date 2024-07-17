@@ -4,7 +4,7 @@ import nav_logo from '../../assets/favicon-free-img-120x120.png'
 import { useDispatch, useSelector } from 'react-redux'
 import shoe from "../../assets/sports-shoe1-300x300.jpg"
 import { removeElement } from '../../Store/Slices/Slices'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 const Navbar2 = () => {
   const [modal,showmodal]=useState(false)
   let dispatch =useDispatch()
@@ -24,6 +24,7 @@ const Navbar2 = () => {
   //Removing Product//
 
   const removeProduct=(id)=>{
+    console.log(id)
     dispatch(removeElement(id))
   }
   //////
@@ -110,7 +111,7 @@ const Navbar2 = () => {
           </div>
           <div className='nav_categories_main'>
             <div className='nav_categories_list nav_categories_list2 '>
-              <a>EveryThing</a>
+              <NavLink className='nav_link2' to={'/everything'}>EveryThing</NavLink>
               <a>Women</a>
               <a>Accesecories</a>
             </div>
