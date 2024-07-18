@@ -113,6 +113,7 @@ const Navbar2 = () => {
             <div className='nav_categories_list nav_categories_list2 '>
               <NavLink className='nav_link2' to={'/everything'}>EveryThing</NavLink>
               <a>Women</a>
+              <a>Men</a>
               <a>Accesecories</a>
             </div>
             
