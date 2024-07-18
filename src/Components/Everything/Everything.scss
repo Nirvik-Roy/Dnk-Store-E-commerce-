@@ -4,6 +4,7 @@ $border:rgb(209, 208, 208);
 $blue: rgb(52, 153, 235);
 .everything_section{
     background-color: $background-color;
+    padding-bottom: 8%;
 }
 .everything_wrapper{
     width: 97%;
@@ -21,6 +22,7 @@ $blue: rgb(52, 153, 235);
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    padding-bottom: 2%;
 }
 .filter_main{
     margin-top: 50px;

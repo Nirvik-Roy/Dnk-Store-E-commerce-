@@ -1,0 +1,25 @@
+.pagination_div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear all;
+}
+.click_pagination{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.pagination_div:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.pagination_div_main{
+    margin-top: 70px;
+    gap: 4px;
+}

@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import './Everything.scss'
 import Navbar2 from '../Navbar/Navbar2'
-import {Slider} from '@mui/material'
-import shoe from '../../assets/sports-shoe1-600x600.jpg'
+import { Slider} from '@mui/material'
+import Pagination from './Pagination'
 import { Link } from 'react-router-dom'
 import API_DATA from '../../Api'
 const Everything = () => {
+    const [inputVal,setinputVal]=useState()
     const [val,setval]=useState([300,2000])
     const [minVal,setminVal]=useState(300)
     const [maxVal,setmaxVal]=useState(1000)
+    const [currentPage,setcurrentPage]=useState(1)
+    const [productsPerPage,setProductsPerPage]=useState(12)
     const [allProductData,setallProductData]=useState([])
     const data=API_DATA;
     useEffect(()=>{
         setallProductData(data)
     },[])
-   
+
+   / /Logic For Pagination///
+
+    const LastIndex = currentPage * productsPerPage;
+    const firstIndex = LastIndex - productsPerPage;
+    const currentProducts = allProductData.slice(firstIndex, LastIndex);
+
+    /Ends Here................./
+
+   // /filterBYPRice logic here....................//
+
     const rangeValue=(element)=>{
         setminVal(element.target.value[0])
         setmaxVal(element.target.value[1])
@@ -25,6 +38,21 @@ const Everything = () => {
      })
      setallProductData(filter_product)
    }
+   /Ends here.................//
+
+
+   /Search BY Name Logic.................../
+   const inputValue=(e)=>{
+       setinputVal(e.target.value)
+   }
+   const searchByName=()=>{
+     const search_filter=data.filter((e)=>{
+        return e.title.toLowerCase().includes(inputVal.toLowerCase())
+     })
+     setallProductData(search_filter)
+   }
+   /Ends here................./
+
 
   return (
     <> <Navbar2/>
@@ -33,8 +61,8 @@ const Everything = () => {
             <div className='everything_wrapper'>
                 <div className='everything_left'>
                     <div className='search_input_div'>
-                        <input className='search_input' type='text' placeholder='Search Products...'></input>
-                        <button className='search_btn'>
+                        <input onChange={((e)=>inputValue(e))} className='search_input' type='text' placeholder='Search Products...'></input>
+                        <button onClick={(()=>searchByName())} className='search_btn'>
                         <i class="fa-solid fa-greater-than"></i>
                         </button>
                     </div>
@@ -109,7 +137,7 @@ const Everything = () => {
                   
                   <div className='dropdown_main d-flex justify-content-between'>
                     <div>
-                        <p>Showing 1–12 of 31 results</p>
+                        <p>Showing 1–12 of {data.length} results</p>
                     </div>
                     <div>
                         <select className='dropdown'>
@@ -120,7 +148,7 @@ const Everything = () => {
                     </div>
                   </div>
                     <div className='products_main'>
-                    {allProductData.map((e)=>{
+                    {currentProducts.map((e)=>{
                        return <>
                        <div className='item_div'>
                             <div className='item_img_div'>
@@ -150,9 +178,11 @@ const Everything = () => {
                      
                         
                     </div>
+                    <Pagination productsPerPage={productsPerPage} totalProducts={data.length} setcurrentPage={setcurrentPage}/>
                     </div>
                 
                 </div>
+                
             </div>
         </div>
       </section>
