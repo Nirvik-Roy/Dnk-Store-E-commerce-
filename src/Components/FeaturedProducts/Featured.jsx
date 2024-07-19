@@ -3,6 +3,7 @@ import "./Featured.scss"
 import { NavLink,Link, useNavigate } from 'react-router-dom'
 import API_DATA from '../../Api'
 import SingleProduct from '../SingleProduct/SingleProduct'
+import Quality from '../Quality/Quality'
 
 
 const Featured = () => {
@@ -24,7 +25,7 @@ const featuredProducts=()=>{
  useEffect(()=>{
     featuredProducts()
  }, [])
- console.log(Featured)
+
 
   return (
     <>
@@ -65,6 +66,26 @@ const featuredProducts=()=>{
            
         </div>
     </div>
+    <div className='limited_time_main d-flex justify-content-center'>
+        <div className='limited_time_wrapper'>
+           <div className='limited_time_heading text-light'>
+           <div className='limited_time_heading_wrapper'>
+            <h5>Limited Time Offer</h5>
+            <h1 className='mt-3 special_edition_head'>Special Edition</h1>
+            <p className='mb-1 mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</p>
+            <p>ullamcorper mattis, pulvinar dapibus leo.</p>
+            <h5 className='mt-3'>Buy This T-shirt At 20% Discount, Use Code OFF20</h5>
+            <div>
+                <button className='btn-light shop_now_btn'>SHOP NOW</button>
+            </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+<Quality/>
+
+
 </div> 
 </>  )
   

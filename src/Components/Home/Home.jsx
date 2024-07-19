@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar.jsx'
 import Logos from '../Logos/Logos.jsx'
 import Featured from '../FeaturedProducts/Featured.jsx'
 import SingleProduct from '../SingleProduct/SingleProduct.jsx'
+import Footer from '../Footer/Footer.jsx'
 const Home = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const Home = () => {
     </section>
     <Logos/>
     <Featured/>
+    <Footer/>
     </>
   )
 }
