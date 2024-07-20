@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className='right_nav_div'>
         <div className='nav_links_main'>
               <a>About</a>
-              <a>Contact</a>
+              <NavLink to={'/contact'} className='nav_link'>Contact</NavLink>
               <a>$0.00</a>
               <div className='nav_cart_div'><i class="fa-solid fa-cart-shopping"></i>
               <div className='cart_quantity_div'>0</div>
