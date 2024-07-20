@@ -12,19 +12,25 @@ const Everything = () => {
     const [maxVal,setmaxVal]=useState(1000)
     const [currentPage,setcurrentPage]=useState(1)
     const [productsPerPage,setProductsPerPage]=useState(12)
+    const [specialProduct,setspecialProduct]=useState([])
     const [allProductData,setallProductData]=useState([])
     const data=API_DATA;
+
+
     useEffect(()=>{
         setallProductData(data)
+        setspecialProduct(data)
     },[])
 
-   / /Logic For Pagination///
+
+   /////Logic For Pagination/////
 
     const LastIndex = currentPage * productsPerPage;
     const firstIndex = LastIndex - productsPerPage;
     const currentProducts = allProductData.slice(firstIndex, LastIndex);
 
     /Ends Here................./
+
 
    // /filterBYPRice logic here....................//
 
@@ -97,7 +103,7 @@ const Everything = () => {
 
                     <div className='best_sellers_main'>
                         <p className='best_seller_head'>Our Best Sellers</p>
-            {allProductData.map((element,index)=>{
+            {specialProduct.map((element,index)=>{
                 
                 if(index >3 && index <=8){
                     return <>
