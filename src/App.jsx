@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Route,Routes } from "react-router-dom"
 import Cart from "./Components/Cart/Cart"
 import Everything from "./Components/Everything/Everything"
 import Contact from "./Components/Contact/Contact"
+import About from "./Components/About/About"
 function App() {
   
 
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/cart" element={<Cart/>}></Route>
             <Route exact path="/everything" element={<Everything/>}></Route>
             <Route exact path="/contact" element={<Contact/>}></Route>
+            <Route exact path="/about" element={<About/>}></Route>
           </Routes>
       </Router>
     </>

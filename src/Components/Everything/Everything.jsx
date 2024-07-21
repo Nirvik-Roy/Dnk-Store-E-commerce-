@@ -16,7 +16,6 @@ const Everything = () => {
     const [allProductData,setallProductData]=useState([])
     const data=API_DATA;
 
-
     useEffect(()=>{
         setallProductData(data)
         setspecialProduct(data)
