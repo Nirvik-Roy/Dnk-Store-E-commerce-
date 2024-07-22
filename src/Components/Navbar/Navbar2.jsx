@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar2.scss'
 import nav_logo from '../../assets/favicon-free-img-120x120.png'
 import { useDispatch, useSelector } from 'react-redux'
-import shoe from "../../assets/sports-shoe1-300x300.jpg"
 import { removeElement } from '../../Store/Slices/Slices'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 const Navbar2 = () => {
   const [modal,showmodal]=useState(false)
   let dispatch =useDispatch()
+   
   //getting data from Store//
   const data =useSelector((state)=>{
     return state.cart
@@ -24,12 +24,13 @@ const Navbar2 = () => {
   //Removing Product//
 
   const removeProduct=(id)=>{
-    console.log(id)
     dispatch(removeElement(id))
   }
+
   //////
 
   //Modal Function//
+
   const modalfunction=()=>{
     showmodal(true)
   }
@@ -38,6 +39,7 @@ const Navbar2 = () => {
   const removeModalfunction=()=>{
     showmodal(false)
   }
+
   const Modal =()=>{
     return <>
     <div className='modal_main'></div>
@@ -112,9 +114,9 @@ const Navbar2 = () => {
           <div className='nav_categories_main'>
             <div className='nav_categories_list nav_categories_list2 '>
               <NavLink className='nav_link2' to={'/everything'}>EveryThing</NavLink>
-              <a>Women</a>
-              <a>Men</a>
-              <a>Accesecories</a>
+              <NavLink className='nav_link2' to={'/women'}>WOMEN</NavLink>
+              <NavLink to={'/men'} className='nav_link2'>MEN</NavLink>
+              <NavLink className='nav_link2' to={'/accessories'}>ACCESSORIES</NavLink>
             </div>
             
           </div>
@@ -122,8 +124,8 @@ const Navbar2 = () => {
         </div>
         <div className='right_nav_div'>
         <div className='nav_links_main nav_links_main2'>
-              <a>About</a>
-              <a>Contact</a>
+        <NavLink to={'/about'} className='nav_link2' >About</NavLink>
+        <NavLink to={'/contact'} className='nav_link2'>Contact</NavLink>
               <a>${sum}.00</a>
               <div onClick={(()=>modalfunction())} className='nav_cart_div'><i class="fa-solid fa-cart-shopping"></i>
               <div className='cart_quantity_div cart_quantity_div2'>{data.length}</div>

@@ -1,11 +1,11 @@
+import './Men.scss'
 import React, { useEffect, useState } from 'react'
-import './Everything.scss'
 import Navbar2 from '../Navbar/Navbar2'
 import { Slider} from '@mui/material'
-import Pagination from './Pagination'
+import Pagination from '../Everything/Pagination.jsx'
 import { Link } from 'react-router-dom'
 import API_DATA from '../../Api'
-const Everything = () => {
+const Men = () => {
     const [inputVal,setinputVal]=useState()
     const [val,setval]=useState([300,2000])
     const [value,setvalue]=useState({minVal:300,maxVal:1000})
@@ -17,7 +17,9 @@ const Everything = () => {
     const [FirstIndex,setFirstIndex]=useState()
     const [currentProducts,setcurrentProducts]=useState([])
     const [count ,setcount]=useState(0)
-    const data=API_DATA;
+    const data=API_DATA.filter((e)=>{
+        return e.category=='men'
+    });
 
     useEffect(()=>{
         setallProductData(data)
@@ -40,6 +42,7 @@ const Everything = () => {
     ///Ends Here.................////
 
 
+
    // /filterBYPRice logic here....................//
 
     const rangeValue=(element)=>{
@@ -52,12 +55,15 @@ const Everything = () => {
      setcount(Math.random()*100)
      setallProductData(filter_product)
    }
-   /Ends here.................//
+
+   ///Ends here.................////
 
 
 
 
-   /Search BY Name Logic.................../
+   /////Search BY Name Logic...................////
+
+
    const inputValue=(e)=>{
        setinputVal(e.target.value)
    }
@@ -68,7 +74,8 @@ const Everything = () => {
      setcount(Math.random()*100)
      setallProductData(search_filter)
    }
-   ///Ends here.................///
+
+   ////Ends here.................////
    
 
 
@@ -89,6 +96,7 @@ const Everything = () => {
     }
    }
 
+/////Logic Endes/////
   return (
     <> <Navbar2/>
       <section className='everything_section'>
@@ -225,4 +233,4 @@ const Everything = () => {
   )
 }
 
-export default Everything
+export default Men
