@@ -110,9 +110,9 @@ const Navbar = () => {
     <>
       <nav className='nav_main'>
         <div className='left_nav_div'>
-          <div className='nav_logo_div'>
+          <NavLink to={'/'} className='nav_logo_div'>
             <img src={nav_logo} alt='logo' />
-          </div>
+          </NavLink>
           <div className='nav_categories_main'>
             <div className='nav_categories_list'>
               <NavLink className='nav_link' to={'/everything'}>EveryThing</NavLink>

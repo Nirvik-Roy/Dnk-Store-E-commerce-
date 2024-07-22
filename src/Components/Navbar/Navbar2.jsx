@@ -108,9 +108,9 @@ const Navbar2 = () => {
     <>
       <nav className='nav_main nav_main2'>
         <div className='left_nav_div'>
-          <div className='nav_logo_div nav_logo_div2'>
+          <NavLink to={'/'} className='nav_logo_div nav_logo_div2'>
             <img className='nav_logo_img' src={nav_logo} alt='logo' />
-          </div>
+          </NavLink>
           <div className='nav_categories_main'>
             <div className='nav_categories_list nav_categories_list2 '>
               <NavLink className='nav_link2' to={'/everything'}>EveryThing</NavLink>
