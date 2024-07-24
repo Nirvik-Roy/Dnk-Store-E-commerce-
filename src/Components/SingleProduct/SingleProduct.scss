@@ -2,7 +2,7 @@ $background-color:rgb(246, 247, 249);
 
 .singleProduct_section{
     background-color:$background-color;
-    padding-bottom: 10%;
+    padding-bottom: 8%;
 }
 .single_product_main{
     display: flex;
@@ -93,4 +93,95 @@ $background-color:rgb(246, 247, 249);
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.description_review_div{
+    width: 90%;
+}
+.description_review_main{
+    width: 15%;
+}
+.product_description_wrapper{
+    width: 90%;
+}
+.review_div_wrapper{
+    width: 90%;
+    border: 1px solid rgba(208, 207, 207, 0.648);
+    padding-bottom: 4%;
+}
+.review_form_div{
+    width: 95%;
+}
+.star2{
+    font-size: larger;
+    color: black;
+}
+.star2:hover{
+    color: rgb(0, 123, 255);
+}
+.review_input{
+    width: 100%;
+    border: 1px solid rgba(208, 207, 207, 0.429);
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+    height: 120px;
+}
+.review_name_input{
+    width: 100%;
+    border: 1px solid rgba(208, 207, 207, 0.429);
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+    height: 50px;
+}
+.review_name_input{
+    width: 100%;
+    border: 1px solid rgba(208, 207, 207, 0.429);
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+    height: 50px;
+}
+.review_email_input{
+    width: 100%;
+    border: 1px solid rgba(208, 207, 207, 0.429);
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+    height: 50px;
+}
+.submit_review_btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    margin-top: 20px;
+}
+.submit_review_btn:hover{
+    background-color: rgb(0, 102, 204);
+}
+.realted_products_wrapper{
+    width: 90%;
+    margin-top: 50px;
+}
+.realted_products_divs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+.realted_product{
+    width: 25%;
+    margin-bottom: 20px;
+}
+.realted_product_img_div{
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+.realted_product_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
