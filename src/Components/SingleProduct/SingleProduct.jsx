@@ -95,7 +95,7 @@ theme="light"
             <div className='left_singleproduct_div'>
       
       <div className='singleProduct_image_div '>
-        <img className='single_product_img' src={e.images[Index]} alt='product_img'></img>
+        <img className='single_product_img' loading='lazy' src={e.images[Index]} alt='product_img'></img>
       </div>
   
       <div className='small_single_product_img_div_main'>

@@ -17,10 +17,16 @@ const Accessories = () => {
     const [FirstIndex,setFirstIndex]=useState()
     const [currentProducts,setcurrentProducts]=useState([])
     const [count ,setcount]=useState(0)
+    const allData=API_DATA
     const data=API_DATA.filter((e)=>{
         return e.accessories==true
     });
-
+    const men=allData.filter((e)=>{
+        return e.category=='men'
+    })
+    const women=allData.filter((e)=>{
+        return e.category=='women'
+    })
     useEffect(()=>{
         setallProductData(data)
         setspecialProduct(data)
@@ -123,17 +129,17 @@ const Accessories = () => {
                         <p className='categories_para2'>Categories</p>
                         <div className='categories_men d-flex justify-content-between'>
                             <p className='men'>Men</p>
-                            <p className='men_items'>(15)</p>
+                            <p className='men_items'>({men.length})</p>
                         </div>
 
                         <div className='categories_women d-flex justify-content-between'>
                             <p className='women'>Women</p>
-                            <p className='women_items'>(20)</p>
+                            <p className='women_items'>({women.length})</p>
                         </div>
 
                         <div className='categories_accessories d-flex justify-content-between'>
                             <p className='accessories'>Accessories</p>
-                            <p className='accessories_items'>(7)</p>
+                            <p className='accessories_items'>({data.length})</p>
                         </div>
                     </div>
 

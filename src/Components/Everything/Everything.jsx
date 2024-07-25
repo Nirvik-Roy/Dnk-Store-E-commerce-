@@ -19,9 +19,19 @@ const Everything = () => {
     const [count ,setcount]=useState(0)
     const data=API_DATA;
 
+    const men=data.filter((e)=>{
+        return e.category=='men'
+    })
+    const women=data.filter((e)=>{
+        return e.category=='women'
+    })
+    const accessories =data.filter((e)=>{
+        return e.accessories==true
+    })
     useEffect(()=>{
         setallProductData(data)
         setspecialProduct(data)
+
     },[])
 
      
@@ -115,17 +125,17 @@ const Everything = () => {
                         <p className='categories_para2'>Categories</p>
                         <div className='categories_men d-flex justify-content-between'>
                             <p className='men'>Men</p>
-                            <p className='men_items'>(15)</p>
+                            <p className='men_items'>({men.length})</p>
                         </div>
 
                         <div className='categories_women d-flex justify-content-between'>
                             <p className='women'>Women</p>
-                            <p className='women_items'>(20)</p>
+                            <p className='women_items'>({women.length})</p>
                         </div>
 
                         <div className='categories_accessories d-flex justify-content-between'>
                             <p className='accessories'>Accessories</p>
-                            <p className='accessories_items'>(7)</p>
+                            <p className='accessories_items'>({accessories.length})</p>
                         </div>
                     </div>
 
@@ -142,7 +152,7 @@ const Everything = () => {
                    <img className='best_seller_product_img' src={element.image}></img>
                </div>
                <div className='best_seller_product_details_div'>
-                   <p className='best_seller_product_title mb-0'>{element.title}</p>
+                   <Link to={`/singleproduct/${element.id}`} className='best_seller_product_title mb-0'>{element.title}</Link>
                    <i className="fa-regular fa-star"></i>
                    <i className="fa-regular fa-star"></i>
                    <i className="fa-regular fa-star"></i>
@@ -187,7 +197,7 @@ const Everything = () => {
                        return <>
                        <div className='item_div'>
                             <div className='item_img_div'>
-                                <img className='item_img' src={e.image}></img>
+                                <img className='item_img' loading='lazy' src={e.image}></img>
                             </div>
                             <div className='item_details'>
                                 <Link to={`/singleproduct/${e.id}`} className='item_name'><strong className='item_name mt-5'>{e.title}</strong></Link>
