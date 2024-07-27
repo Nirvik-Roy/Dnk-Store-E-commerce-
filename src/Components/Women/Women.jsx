@@ -33,6 +33,7 @@ const Women = () => {
     useEffect(()=>{
         setallProductData(data)
         setspecialProduct(data)
+        window.scrollTo({top:0,behavior:'instant'})
     },[])
 
      
@@ -183,7 +184,7 @@ const Women = () => {
                 <div className='everything_right'>
                     <div className='all_products_wrapper'>
                     <div>
-                        <Link className='link'>Home</Link>
+                        <Link to={'/'} className='link'>Home</Link>
                         <span>/Store</span>
                   </div>
                   

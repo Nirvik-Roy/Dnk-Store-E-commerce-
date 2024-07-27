@@ -7,7 +7,7 @@ import Quality from '../Quality/Quality'
 
 
 const Featured = () => {
-  
+  const navigate = useNavigate()
        const [Featured,setFeatured]=useState([])
   
      const API=API_DATA;
@@ -76,7 +76,7 @@ const featuredProducts=()=>{
             <p>ullamcorper mattis, pulvinar dapibus leo.</p>
             <h5 className='mt-3'>Buy This T-shirt At 20% Discount, Use Code OFF20</h5>
             <div>
-                <button className='btn-light shop_now_btn'>SHOP NOW</button>
+                <button onClick={(()=>navigate('/women'))} className='btn-light shop_now_btn'>SHOP NOW</button>
             </div>
             </div>
            </div>

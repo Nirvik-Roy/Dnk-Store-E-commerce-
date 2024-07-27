@@ -88,6 +88,10 @@ const data2 = API_DATA
     });
  }
 
+
+ //MouseHover Zoom Effect logic starts here/////
+
+
  const mouseEnterZoom=(e)=>{
   let x=e.clientX - e.target.offsetLeft
   let y=e.clientY - e.target.offsetTop
@@ -105,6 +109,8 @@ const data2 = API_DATA
     scale:1,
   })
  }
+
+ //Mouse enter zoom logic Ends Here//
   return (
     <>
     <ToastContainer

@@ -3,7 +3,7 @@ import './Everything.scss'
 import Navbar2 from '../Navbar/Navbar2'
 import { Slider} from '@mui/material'
 import Pagination from './Pagination'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import API_DATA from '../../Api'
 import Footer from '../Footer/Footer'
 const Everything = () => {
@@ -19,7 +19,7 @@ const Everything = () => {
     const [currentProducts,setcurrentProducts]=useState([])
     const [count ,setcount]=useState(0)
     const data=API_DATA;
-
+ 
     const men=data.filter((e)=>{
         return e.category=='men'
     })
@@ -177,7 +177,7 @@ const Everything = () => {
                 <div className='everything_right'>
                     <div className='all_products_wrapper'>
                     <div>
-                        <Link className='link'>Home</Link>
+                        <Link to={'/'} className='link'>Home</Link>
                         <span>/Store</span>
                   </div>
                   

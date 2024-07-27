@@ -31,6 +31,7 @@ const Accessories = () => {
     useEffect(()=>{
         setallProductData(data)
         setspecialProduct(data)
+        window.scrollTo({top:0,behavior:'instant'})
     },[])
 
      

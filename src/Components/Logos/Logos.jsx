@@ -8,8 +8,9 @@ import logo5 from "../../assets/client-logo-5.png"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
-
+import {useNavigate} from 'react-router-dom'
 const Logos = () => {
+    const navigate =useNavigate()
     const settings = {
         dots: false,
         infinite: true,
@@ -77,7 +78,7 @@ const Logos = () => {
                             <div><h4 className='text-light offer_heading'>20% Off On Tank Tops</h4></div>
                             <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
                             <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
-                            <div><button className='btn btn-light btn_shop '>SHOP NOW</button></div>
+                            <div><button onClick={(()=>navigate('/women'))} className='btn btn-light btn_shop '>SHOP NOW</button></div>
                         </div>
                         </div>
                 </div>
@@ -87,7 +88,7 @@ const Logos = () => {
                             <div><h4 className='text-light offer_heading'>Latest Eyewear For You</h4></div>
                             <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
                             <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
-                            <div><button className='btn btn-light btn_shop '>SHOP NOW</button></div>
+                            <div><button onClick={(()=>navigate('/men'))} className='btn btn-light btn_shop '>SHOP NOW</button></div>
                         </div>
                         </div>
                 </div>
@@ -97,7 +98,7 @@ const Logos = () => {
                             <div><h4 className='text-light offer_heading'>Let's Lorem Suit Up!</h4></div>
                             <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
                             <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
-                            <div><button className='btn btn-light btn_shop '>CHECK OUT</button></div>
+                            <div><button onClick={(()=>navigate('/accessories'))} className='btn btn-light btn_shop '>CHECK OUT</button></div>
                         </div>
                         </div>
                 </div>
