@@ -5,6 +5,7 @@ import { Slider} from '@mui/material'
 import Pagination from '../Everything/Pagination.jsx'
 import { Link } from 'react-router-dom'
 import API_DATA from '../../Api'
+import Footer from '../Footer/Footer.jsx'
 const Men = () => {
     const [inputVal,setinputVal]=useState()
     const [val,setval]=useState([300,2000])
@@ -235,6 +236,7 @@ const Men = () => {
             </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

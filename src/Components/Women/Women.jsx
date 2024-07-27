@@ -5,6 +5,7 @@ import Pagination from '../Everything/Pagination.jsx'
 import { Link } from 'react-router-dom'
 import API_DATA from '../../Api'
 import './Women.scss'
+import Footer  from '../Footer/Footer.jsx'
 const Women = () => {
     const [inputVal,setinputVal]=useState()
     const [val,setval]=useState([300,2000])
@@ -17,6 +18,7 @@ const Women = () => {
     const [FirstIndex,setFirstIndex]=useState()
     const [currentProducts,setcurrentProducts]=useState([])
     const [count ,setcount]=useState(0)
+
     const allData=API_DATA
     const data=API_DATA.filter((e)=>{
         return e.category=='women'
@@ -236,6 +238,7 @@ const Women = () => {
             </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

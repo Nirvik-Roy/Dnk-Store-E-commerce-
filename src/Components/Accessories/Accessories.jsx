@@ -5,6 +5,7 @@ import Pagination from '../Everything/Pagination.jsx'
 import { Link } from 'react-router-dom'
 import API_DATA from '../../Api'
 import './Accessories.scss'
+import Footer from '../Footer/Footer.jsx'
 const Accessories = () => {
     const [inputVal,setinputVal]=useState()
     const [val,setval]=useState([300,2000])
@@ -235,6 +236,7 @@ const Accessories = () => {
             </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

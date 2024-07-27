@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {useParams,NavLink,Link} from 'react-router-dom'
 import API_DATA from "../../Api"
 import Navbar2 from '../Navbar/Navbar2'
@@ -10,32 +10,49 @@ import Footer from '../Footer/Footer.jsx'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const SingleProduct = () => {
+  const [product,setproduct]=useState([])
+  const [Color,setColor]=useState('')
+  const [quantity,setQuantity]=useState(1)
+  const [Index,setIndex]=useState(0)
+
+  const [position,setposition]=useState({
+    x: 0,
+    y: 0,
+    scale:1
+  })
+  
 const data2 = API_DATA
   const data=useSelector((state)=>{ //Very important steps//
     return state.cart
   })  
 
  //this one too//
-  console.log(data) //this one too//
+  console.log(data)
 
-  const [product,setproduct]=useState([])
-  const [Color,setColor]=useState('')
-  const [quantity,setQuantity]=useState(1)
-  const [Index,setIndex]=useState(0)
+
+  
+  
+  
+  
   const {id}=useParams()
   const dispatch=useDispatch()
+
+
   const Api=API_DATA
+
+
  const Single_product =()=>{
   let filter_data=Api.filter((element)=>{
     return element.id==id
   })
   setproduct(filter_data)
  }
+
  useEffect(()=>{
   window.scrollTo({top:0,behavior:'instant'})
   Single_product()
-
  },[])
+
  const setIndexFun =(i)=>{
   setIndex(i)
  }
@@ -70,6 +87,24 @@ const data2 = API_DATA
     
     });
  }
+
+ const mouseEnterZoom=(e)=>{
+  let x=e.clientX - e.target.offsetLeft
+  let y=e.clientY - e.target.offsetTop
+  setposition({
+    x:x,
+    y:y,
+    scale:2,
+  })
+ }
+
+ const mouseLeaveZoom=()=>{
+  setposition({
+    x:0,
+    y:0,
+    scale:1,
+  })
+ }
   return (
     <>
     <ToastContainer
@@ -94,8 +129,8 @@ theme="light"
           return<>
             <div className='left_singleproduct_div'>
       
-      <div className='singleProduct_image_div '>
-        <img className='single_product_img' loading='lazy' src={e.images[Index]} alt='product_img'></img>
+      <div className='singleProduct_image_div' onMouseMove={((e)=>mouseEnterZoom(e))} onMouseLeave={(()=>mouseLeaveZoom())}>
+        <img style={{width:'100%',height:'100%',objectFit:'cover',transformOrigin:`${position.x}px ${position.y}px`,transform:`scale(${position.scale})`,overflow:'hidden'}} className='single_product_img' loading='lazy' src={e.images[Index]} alt='product_img'></img>
       </div>
   
       <div className='small_single_product_img_div_main'>
