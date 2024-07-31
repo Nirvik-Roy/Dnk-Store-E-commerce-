@@ -66,7 +66,7 @@ const Navbar2 = () => {
             </div>
             <div className='center_product_details_div'>
               <div className='product_details'>
-                <p>{element.title}</p>
+                <p className='product_name'>{element.title}</p>
                 <p>{element.quantity} X ${element.price}.00</p>
               </div>
             </div>

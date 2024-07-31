@@ -13,6 +13,14 @@
 .nav_logo_div{
     width: 20%;
 }
+.nav_logo_div2{
+    width: 20%;
+    padding-top: 29px;
+    display: none;
+}
+.nav_logo2_img{
+    width: 100%;
+}
 .right_nav_div{
     display: flex;
     margin-right: 2%;
@@ -67,4 +75,103 @@
     left:50%;
     bottom: 83%;
     cursor: pointer;
+}
+.fa-bars{
+    display: none;
+}
+.user{
+    display: none;
+}
+.nav_menu_main{
+    height: 100vh;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    position: fixed;
+    cursor: pointer;
+    animation: modal 0.3s linear 1;
+    overflow-y: scroll;
+}
+.fa-circle-xmark:hover{
+    color: rgb(6, 124, 183);
+    
+}
+.fa-user3{
+  font-size: 5vw;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.nav_menu_all_links_div{
+    background-color: rgb(244, 247, 250);
+}
+.nav_menu_link_div{
+    height: 45px;
+    color: black;
+    font-weight: 600;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+@keyframes modal {
+    0%{
+        transform: translateX(100%);
+    }100%{
+        transform: translateX(-0%);
+    }
+}
+@media(max-width:1274px){
+    .nav_link{
+        display: none;
+    }
+    .fa-user2{
+        display: none;
+    }
+    .fa-bars{
+        display: block;
+        font-size: x-large;
+        
+    }
+    .user{
+        display: block;
+        background-color: black;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -22px;
+    }
+    .nav_main{
+        background-color: white;
+        height: 70px;
+    }
+    .nav_logo_div{
+        display: none;
+    }
+    .nav_logo_div2{
+        display: block;
+    }
+    .nav_cart_div{
+        margin-top: -10px;
+    }
+    .fa-cart-shopping{
+        color: black;
+    }
+    .cart_quantity_div{
+        color: white;
+        background-color: black;
+    }
+    .total_price_nav{
+        color: black;
+        text-decoration: none;
+        list-style: none;
+        margin-top: -12px;
+    }
 }

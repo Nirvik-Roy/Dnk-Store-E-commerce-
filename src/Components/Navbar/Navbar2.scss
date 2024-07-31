@@ -1,6 +1,4 @@
-
 $background-color:white;
-
 .nav_main2{
     height: 100px;
     color: white;
@@ -54,7 +52,6 @@ $background-color:white;
     justify-content: end;
     text-transform: uppercase;
     padding-top: 5px;
-    
 }
 .nav_cart_div{
     position: relative;
@@ -133,6 +130,12 @@ $background-color:white;
     width: 50%;
     height: 80px;
     
+}
+.product_details{
+    width: 100%;
+}
+.remove_icon_div{
+  width: 15%;
 }
 .img_div{
     height: 70px;
