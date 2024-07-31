@@ -6,6 +6,7 @@ import { removeElement } from '../../Store/Slices/Slices'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 const Navbar2 = () => {
   const [modal,showmodal]=useState(false)
+  const [menu,setmenu]=useState(false)
   let dispatch =useDispatch()
    
   //getting data from Store//
@@ -104,11 +105,58 @@ const Navbar2 = () => {
       
     </>
   }
+
+
+  //Navmenu function//
+
+  
+  const nav_menu=()=>{
+    return<>
+      <div className='modal_main'></div>
+      <div className='nav_menu_main'>
+           <div onClick={(()=>setmenu(false))} className='nav_menu_cross_div d-flex justify-content-end mt-4 me-3'>
+           <i class="fa-solid fa-circle-xmark fa-2xl"></i>
+           </div>
+           <i class="fa-solid fa-user fa-user3 "></i>
+           <div className='nav_menu_all_links_div mt-4'>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/everything' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>EVERYTHING</NavLink>
+            </div>
+            <hr className='text-dark'></hr>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/women' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>WOMEN</NavLink>
+            </div>
+            <hr className='text-dark'></hr>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/men' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>MEN</NavLink>
+            </div>
+            <hr className='text-dark'></hr>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/accessories' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>ACCESSORIES</NavLink>
+            </div>
+            <hr className='text-dark'></hr>
+           </div>
+
+           <div className='nav_menu_all_links_div mt-5'>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/about' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>ABOUT</NavLink>
+            </div>
+            <hr className='text-dark'></hr>
+            <div className='nav_menu_link_div'>
+              <NavLink to='/contact' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>CONTACT US</NavLink>
+            </div>
+            <hr></hr>
+            
+           </div>
+      </div>
+    </>
+  }
+
   return (
     <>
       <nav className='nav_main nav_main2'>
-        <div className='left_nav_div'>
-          <NavLink to={'/'} className='nav_logo_div nav_logo_div2'>
+        <div className='left_nav_div2'>
+          <NavLink to={'/'} className='nav_logo_div'>
             <img className='nav_logo_img' src={nav_logo} alt='logo' />
           </NavLink>
           <div className='nav_categories_main'>
@@ -122,19 +170,20 @@ const Navbar2 = () => {
           </div>
          
         </div>
-        <div className='right_nav_div'>
+        <div className='right_nav_div2'>
         <div className='nav_links_main nav_links_main2'>
         <NavLink to={'/about'} className='nav_link2' >About</NavLink>
         <NavLink to={'/contact'} className='nav_link2'>Contact</NavLink>
-              <a>${sum}.00</a>
-              <div onClick={(()=>modalfunction())} className='nav_cart_div'><i class="fa-solid fa-cart-shopping"></i>
+              <a className='total_price_nav2'>${sum}.00</a>
+              <div onClick={(()=>modalfunction())} className='nav_cart_div2'><i class="fa-solid fa-cart-shopping"></i>
               <div className='cart_quantity_div cart_quantity_div2'>{data.length}</div>
               </div>
-              <div><i class="fa-solid fa-user"></i></div>
+              <div><i class="fa-solid fa-user fa-user2"></i></div>
+              <div className='user' onClick={(()=>setmenu(true))}><i class="fa-solid fa-bars fa-lg"></i></div>
             </div>
         </div>
         {modal&& <Modal/>}
-       
+        {menu&& nav_menu()}
       </nav>
       
     </>

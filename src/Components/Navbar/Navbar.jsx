@@ -162,7 +162,7 @@ const Navbar = () => {
     <>
       <nav className='nav_main'>
         <div className='left_nav_div'>
-          <NavLink to={'/'} className='nav_logo_div'>
+          <NavLink to={'/'} className='nav_logo_div1'>
             <img src={nav_logo} alt='logo' />
           </NavLink>
           <NavLink to={'/'} className='nav_logo_div2'>
