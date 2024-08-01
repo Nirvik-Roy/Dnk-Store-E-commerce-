@@ -45,7 +45,7 @@ const featuredProducts=()=>{
                 </div>
                 <div className='featured_details_div mt-3'>
                  <Link to={`/singleproduct/${element.id}`} className="link"><p className='featured_title mb-0'>{element.title}</p></Link> 
-                    <p className='mb-0'>{element.category}</p>
+                    <p className='featured_category mb-0'>{element.category}</p>
                     <p className='featured_price'>${element.price}</p>
                 </div>
                 <div className='color_div'>
@@ -57,6 +57,10 @@ const featuredProducts=()=>{
                     )}
 
                 </div>
+                <i className="fa-regular fa-star fa-star2"></i>
+               <i className="fa-regular fa-star fa-star2"></i>
+               <i className="fa-regular fa-star fa-star2"></i>
+               <i className="fa-regular fa-star fa-star2"></i>
             </div>
                 </>)
             }
@@ -70,12 +74,17 @@ const featuredProducts=()=>{
         <div className='limited_time_wrapper'>
            <div className='limited_time_heading text-light'>
            <div className='limited_time_heading_wrapper'>
-            <h5>Limited Time Offer</h5>
+            <h5 className='limited_time_head'>Limited Time Offer</h5>
             <h1 className='mt-3 special_edition_head'>Special Edition</h1>
-            <p className='mb-1 mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</p>
-            <p>ullamcorper mattis, pulvinar dapibus leo.</p>
-            <h5 className='mt-3'>Buy This T-shirt At 20% Discount, Use Code OFF20</h5>
-            <div>
+             <div className='limited_para_div'>
+            <p className='mb-1 mt-3 limited_para1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</p>
+            <p className='limited_para1'>ullamcorper mattis, pulvinar dapibus leo.</p>
+</div>
+<div className='discount_ad_div'>
+            <h5 className='mt-3 discount_ad'>Buy This T-shirt At 20% Discount, Use Code OFF20</h5>
+</div>
+
+            <div className='shop_now_btn_div'>
                 <button onClick={(()=>navigate('/women'))} className='btn-light shop_now_btn'>SHOP NOW</button>
             </div>
             </div>

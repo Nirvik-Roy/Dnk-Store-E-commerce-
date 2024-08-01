@@ -170,7 +170,7 @@ const Navbar = () => {
           </NavLink>
           <div className='nav_categories_main'>
             <div className='nav_categories_list'>
-              <NavLink className='nav_link' to={'/everything'}>EveryThing</NavLink>
+              <NavLink className='nav_link nav_link_everything' to={'/everything'}>EveryThing</NavLink>
               <NavLink className='nav_link' to={'/women'}>WOMEN</NavLink>
               <NavLink to={'/men'} className='nav_link'>MEN</NavLink>
               <NavLink className='nav_link' to={'/accessories'}>ACCESSORIES</NavLink>

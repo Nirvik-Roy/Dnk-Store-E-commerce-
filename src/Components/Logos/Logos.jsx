@@ -11,15 +11,43 @@ import Slider from 'react-slick'
 import {useNavigate} from 'react-router-dom'
 const Logos = () => {
     const navigate =useNavigate()
-    const settings = {
+    var settings = {
         dots: false,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true,
+        arrows: true,
+        speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 3000,
-        
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1.50,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
     const Data=[
         {
@@ -47,6 +75,7 @@ const Logos = () => {
     
   return (
     <div className='main2'>
+    
   
     <div className='slide_main d-flex justify-content-center'>
    
@@ -68,6 +97,8 @@ const Logos = () => {
         </div>
         
     </div>
+
+
        
        <div className='offer_main d-flex justify-content-center'>
           
@@ -76,8 +107,8 @@ const Logos = () => {
                        <div className='offer_head_main d-flex justify-content-center'>
                         <div className='left_head_main'>
                             <div><h4 className='text-light offer_heading'>20% Off On Tank Tops</h4></div>
-                            <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
-                            <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
+                            <div><p className='text-light mb-1 offer_para1'>Lorem ipsum dolor sit amet, consectetur</p></div>
+                            <div><p className='text-light offer_para1'>adipiscing elit. Proin ac dictum.</p></div>
                             <div><button onClick={(()=>navigate('/women'))} className='btn btn-light btn_shop '>SHOP NOW</button></div>
                         </div>
                         </div>
@@ -86,8 +117,8 @@ const Logos = () => {
                 <div className='offer_head_main d-flex justify-content-center'>
                         <div className='left_head_main'>
                             <div><h4 className='text-light offer_heading'>Latest Eyewear For You</h4></div>
-                            <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
-                            <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
+                            <div><p className='text-light mb-1 offer_para1'>Lorem ipsum dolor sit amet, consectetur</p></div>
+                            <div><p className='text-light offer_para1'>adipiscing elit. Proin ac dictum.</p></div>
                             <div><button onClick={(()=>navigate('/men'))} className='btn btn-light btn_shop '>SHOP NOW</button></div>
                         </div>
                         </div>
@@ -96,8 +127,8 @@ const Logos = () => {
                 <div className='offer_head_main d-flex justify-content-center'>
                         <div className='left_head_main'>
                             <div><h4 className='text-light offer_heading'>Let's Lorem Suit Up!</h4></div>
-                            <div><p className='text-light mb-1'>Lorem ipsum dolor sit amet, consectetur</p></div>
-                            <div><p className='text-light'>adipiscing elit. Proin ac dictum.</p></div>
+                            <div><p className='text-light mb-1 offer_para1'>Lorem ipsum dolor sit amet, consectetur</p></div>
+                            <div><p className='text-light offer_para1'>adipiscing elit. Proin ac dictum.</p></div>
                             <div><button onClick={(()=>navigate('/accessories'))} className='btn btn-light btn_shop '>CHECK OUT</button></div>
                         </div>
                         </div>

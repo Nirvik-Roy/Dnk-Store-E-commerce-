@@ -60,9 +60,11 @@
     
     font-weight: 700;
 }
+.featured_category{
+ color: rgb(126, 126, 126);
+}
 .featured_price{
     font-weight: 600;
-    
 }
 .link{
     text-decoration: none;
@@ -92,7 +94,6 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 .shop_now_btn{
     width: 145px;
@@ -118,4 +119,82 @@
 .special_edition_head{
     font-weight: 600;
 }
+@media only screen and (min-width:200px) and (max-width:767px){
+    .featured_products_main{
+        margin-top: -40px;
+    }
+    .featured_div{
+        width: 50%;
+    }
+    .featured_img_div{
+           height: 130px;
+    }
+    .featured_title{
+        font-size: 80%;
+    }
+    .featured_price{
+        font-size: 70%;
+    }
+    .featured_category{
+        font-size: 60%;
+        color: rgb(126, 126, 126);
+    }
+    .color_div{
+        width: 50%;
+    }
+    .button{
+        width: 15px;
+        height: 15px;
+    }
+    .fa-star2{
+        font-size: 80%;
+    }
+    .limited_time_heading{
+        width: 100%;
+        margin-top: 50px;
+    }
+   .limited_time_head{
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+   }
+   .special_edition_head{
+    font-size: 150%;
+     text-align: center;
+   }
+   .limited_para_div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+   .limited_para1{
+    text-align: center;
+    font-size: medium;
+    width: 90%;
+   }
+   .discount_ad_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   .discount_ad{
+    text-align: center;
+    width: 90%;
+   }
+   .shop_now_btn_div{
+    display: flex;
+    justify-content: center;
+    
+   }
+   .shop_now_btn{
+    width: 90%;
 
+   }
+   .limited_time_wrapper{
+    width: 85%;
+    background-position: right;
+    background-size: cover;
+   }
+}

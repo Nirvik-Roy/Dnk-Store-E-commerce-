@@ -21,3 +21,18 @@
     width: 24%;
     height: 200px;
 }
+@media only screen and (min-width:200px) and (max-width:767px){
+    .qualtiy_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .quality_div{
+        width: 85%;
+    }
+   .quality_head{
+    font-size: 100%;
+   }
+  
+}

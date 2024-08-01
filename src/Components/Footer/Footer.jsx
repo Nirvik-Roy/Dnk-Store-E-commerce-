@@ -17,9 +17,11 @@ const Footer = () => {
 
            
              <div className='footer_left'>
+             <div className='footer_div_img_wrapper'>
                 <div className='footer_img_div'>
                     <img src={logo} className='footer_img'></img>
                 </div>
+</div>
                 <h4 className='mt-5'>The best look anytime, anywhere.</h4>
              </div>
 
