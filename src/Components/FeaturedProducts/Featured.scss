@@ -125,9 +125,12 @@
     }
     .featured_div{
         width: 50%;
+        
     }
     .featured_img_div{
            height: 130px;
+           display: flex;
+           justify-content: start;
     }
     .featured_title{
         font-size: 80%;

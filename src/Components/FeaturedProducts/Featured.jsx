@@ -57,10 +57,12 @@ const featuredProducts=()=>{
                     )}
 
                 </div>
+                <div>
                 <i className="fa-regular fa-star fa-star2"></i>
                <i className="fa-regular fa-star fa-star2"></i>
                <i className="fa-regular fa-star fa-star2"></i>
                <i className="fa-regular fa-star fa-star2"></i>
+               </div>
             </div>
                 </>)
             }
