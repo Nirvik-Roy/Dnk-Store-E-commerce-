@@ -11,7 +11,8 @@
   color: rgb(8, 136, 240);;
 }
 
-body{
+html,body{
+  height:100dvh;
   width: 100%;
   margin: 0;
   padding: 0;
