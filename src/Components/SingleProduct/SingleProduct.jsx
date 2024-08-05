@@ -151,24 +151,24 @@ theme="light"
     </div>
      <div className='right_singleproduct_div'>
       <div className='singleproduct_details_div'>
-        <a>Home/</a><a>Men/</a><a>{e.title}</a>
-        <p className='mt-4 text-uppercase'>{e.category}</p>
-        <h2 className='mb-3'>{e.title}</h2>
-        <h4 className='d-inline'>${e.price}</h4><span > +Free Shipping</span>
+        <a className='singleproduct_titles'>Home/</a><a className='singleproduct_titles'>Men/</a><a className='singleproduct_titles'>{e.title}</a>
+        <p className='mt-4 singleproduct_category text-capitalize'>{e.category}</p>
+        <h2 className='mb-3 singleproduct_heading'>{e.title}</h2>
+        <h4 className='d-inline singleproduct_price'>${e.price}</h4><span > +Free Shipping</span>
         <p className='mt-3 product_description'>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit sed.</p>
         <div className='color_div_main'>
         {e.color.map((ele)=>(
           <button onClick={(()=>getColor(ele))} className='color_btn_main btn mt-3' style={{backgroundColor:ele}}></button>
         ))}
         </div>
-        <hr className='mt-5'></hr>
+        <hr className='mt-5 hr_line5'></hr>
         <div>
           <input className='quantity_input' type='number' onChange={((event)=>getQuantity(event))} defaultValue={1} min={1} max={25}></input>
           <button onClick={(()=>productDetails(e))} className='btn btn-primary btn_add_to_cart'>ADD TO CART</button>
-          <hr></hr>
+          <hr className=' hr_line6'></hr>
         </div>
-        <span>SKU: N/A</span>
-        <span className='ms-3'>Category: Men</span>
+        <span className='category_men'>SKU: N/A</span>
+        <span className='ms-3 category_men'>Category: {e.category}</span>
       </div>
      </div>
 
@@ -181,7 +181,7 @@ theme="light"
       </div>
       
       <div className='d-flex justify-content-center'>
-      <hr className='hr_line'/>
+      <hr className='hr_line hr_line7'/>
       
       </div>
       <div className='d-flex justify-content-center'>
@@ -195,29 +195,29 @@ theme="light"
     <div className='d-flex justify-content-center'>
       <div className='mt-4 product_description_wrapper'>
         <h3 className='mt-4'>Product Description</h3>
-        <p className='mt-4'>Since it’s creation lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p className='mt-5'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p className='mt-4 product_description1'>Since it’s creation lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p className='mt-5 product_description1'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
         <h3 className='mt-5'>More about the product</h3>
-        <p className='mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-        <p className='mt-5'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p className='mt-4 product_description1'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+        <p className='mt-5 product_description1'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
       </div>
      
     </div>
     <div className='d-flex justify-content-center mt-5'>
     <div className='review_div_wrapper mt-1 d-flex justify-content-center'>
       <div className='review_form_div'>
-        <h5 className='mt-5'>Your email address will not be published. Required fields are marked *</h5>
-        <p className='d-inline fs-5'>Your Rating* </p><i className="fa-regular fa-star star2 mt-4"></i>
+        <h5 className='mt-5 review_heading'>Your email address will not be published. Required fields are marked *</h5>
+        <p className='d-inline rating fs-5'>Your Rating* </p><i className="fa-regular fa-star star2 mt-4"></i>
                    <i className="fa-regular fa-star star2"></i>
                    <i className="fa-regular fa-star star2"></i>
                    <i className="fa-regular fa-star star2"></i>
                    <i className="fa-regular fa-star star2"></i>
                <form>
-                <label className='fs-5 mt-4'>Your Review*</label>
+                <label className='fs-5 mt-4 review'>Your Review*</label>
                 <input type='text' className='review_input mt-3'></input>
-                <label className='d-block fs-5 mt-4'>Your Name*</label>
+                <label className='d-block fs-5 mt-4 name'>Your Name*</label>
                 <input type='text' className='review_name_input mt-3'></input>
-                <label className='d-block fs-5 mt-4'>Your Email*</label>
+                <label className='d-block fs-5 mt-4 email'>Your Email*</label>
                 <input type='email' className='review_email_input mt-3'></input>
                 <button type='submit' className='submit_review_btn'>SUBMIT</button>
                </form>    
@@ -239,13 +239,14 @@ theme="light"
 <div className='realted_product_img_div'>
   <img className='realted_product_img' src={e.image}></img>
 </div>
-<h5 className='mt-3'>{e.title}</h5>
-<small>{e.category}</small>
-<p>${e.price}</p>
-<i className="fa-regular fa-star"></i>
-               <i className="fa-regular fa-star"></i>
-               <i className="fa-regular fa-star"></i>
-               <i className="fa-regular fa-star"></i>
+<h5 className='mt-3 realted_product_title'>{e.title}</h5>
+<small className='realted_product_category' >{e.category}</small>
+<p className='realted_product_price'>${e.price}</p>
+<i className="fa-regular fa-star star5"></i>
+               <i className="fa-regular fa-star star5"></i>
+               <i className="fa-regular fa-star star5"></i>
+               <i className="fa-regular fa-star star5"></i>
+               <i className="fa-regular fa-star star5"></i>
 </div>
         </>
         }

@@ -47,7 +47,7 @@ const Navbar2 = () => {
       <div className='modal_head text-dark'>
       <div className='modal_wrapper d-flex justify-content-between'>
         <div className='modal_heading'>
-          <h5 className='text-dark'>Shopping Cart</h5>
+          <h5 className='shopping_cart_heading text-dark'>Shopping Cart</h5>
         </div>
         <div onClick={(()=>removeModalfunction())} className='modal_close text-dark'>
         <i className="fa-solid fa-xmark fa-xl"></i>
@@ -67,8 +67,8 @@ const Navbar2 = () => {
             </div>
             <div className='center_product_details_div'>
               <div className='product_details'>
-                <p className='product_name'>{element.title}</p>
-                <p>{element.quantity} X ${element.price}.00</p>
+                <p className='product_name product_title'>{element.title}</p>
+                <p className='product_price'>{element.quantity} X ${element.price}.00</p>
               </div>
             </div>
             <div className='right_product_remove_div d-flex justify-content-center flex-column align-items-end'>

@@ -154,10 +154,10 @@ const Everything = () => {
                </div>
                <div className='best_seller_product_details_div'>
                    <Link to={`/singleproduct/${element.id}`} className='best_seller_product_title mb-0'>{element.title}</Link>
-                   <i className="fa-regular fa-star"></i>
-                   <i className="fa-regular fa-star"></i>
-                   <i className="fa-regular fa-star"></i>
-                   <i className="fa-regular fa-star"></i>
+                   <i className="fa-regular fa-star "></i>
+                   <i className="fa-regular fa-star "></i>
+                   <i className="fa-regular fa-star "></i>
+                   <i className="fa-regular fa-star "></i>
                    <p className='best_seller_product_price'>${element.price}</p>
                </div>
            </div>

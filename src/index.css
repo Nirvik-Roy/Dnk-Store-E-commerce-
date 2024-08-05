@@ -7,9 +7,6 @@
   display: none;
 } */
 
- html::-webkit-scrollbar{
-  display: none;
- }
 .active{
   color: rgb(8, 136, 240);;
 }
@@ -17,8 +14,6 @@ html{
   height: 100%;
   margin: 0;
   padding: 0;
- 
-
 }
 body{
   height: 100%;
@@ -26,4 +21,7 @@ body{
   margin: 0;
   padding: 0;
   
+}
+.fa-star{
+  color:  rgba(55, 55, 55, 0.688)
 }
