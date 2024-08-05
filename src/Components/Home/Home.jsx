@@ -10,6 +10,7 @@ const Home = () => {
   useEffect(()=>{
     window.scrollTo({top:0,behavior:'instant'})
   },[])
+
   const navigate=useNavigate()
   return (
     <>

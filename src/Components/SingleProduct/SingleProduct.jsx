@@ -28,10 +28,7 @@ const data2 = API_DATA
 
  //this one too//
   console.log(data)
-
-
-  
-  
+  setTimeout(()=>window.scroll(x,y),100)
   
   
   const {id}=useParams()
