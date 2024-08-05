@@ -10,7 +10,9 @@
 .active{
   color: rgb(8, 136, 240);;
 }
-body{
+
+body,html{
+  height:100vh
   width: 100%;
   margin: 0;
   padding: 0;
