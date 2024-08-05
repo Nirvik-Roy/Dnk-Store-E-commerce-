@@ -67,6 +67,9 @@
 }
 @media only screen and (min-width:200px) and (max-width:767px){
     .home_section{
+        background-attachment: scroll;
+    }
+    .home_section{
         padding-bottom: 20%;
         background-position:top ;
     }

@@ -250,6 +250,12 @@ $background-color:rgb(246, 247, 249);
         font-size: 140%;
         color: #2d2d2d;
     }
+    .color_div_main{
+        width: 32%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+     }
     .product_description{
         line-height:28px;
         font-size: small;

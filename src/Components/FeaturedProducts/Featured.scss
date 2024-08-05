@@ -93,9 +93,9 @@
     padding-bottom: 7.5%;
   width: 99%;
   background-image:linear-gradient(to right, rgba(6, 114, 197, 0.594),rgba(0, 166, 255, 0)) ,url('../../assets/banner-03.jpg');
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .shop_now_btn{
     width: 145px;
@@ -164,6 +164,9 @@
     .fa-star2{
         font-size: 80%;
        color:  rgba(76, 76, 76, 0.688)
+    }
+    .limited_time_wrapper{
+          background-attachment:scroll
     }
     .limited_time_heading{
         width: 100%;
