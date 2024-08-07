@@ -105,7 +105,7 @@ const Everything = () => {
       <section className='everything_section'>
         <div className='everything_main d-flex justify-content-center'>
             <div className='everything_wrapper'>
-                <div className='everything_left'>
+                <div className='everything_left' id='left'>
                     <div className='search_input_div'>
                         <input onChange={((e)=>inputValue(e))} className='search_input' type='text' placeholder='Search Products...'></input>
                         <button onClick={(()=>searchByName())} className='search_btn'>
@@ -119,7 +119,7 @@ const Everything = () => {
                         </div>
                         <div className='filter_btn_main d-flex justify-content-between'>
                             <button className='filter_btn' onClick={(()=>priceFilter())}>Filter</button>
-                            <p className='price_para'>Price<span><small>${value.minVal}-${value.maxVal}</small></span></p>
+                            <p className='price_para'>Price<span className='price_para2'><small>${value.minVal}-${value.maxVal}</small></span></p>
                         </div>
                     </div>
                     <div className='categories_main'>
@@ -154,10 +154,11 @@ const Everything = () => {
                </div>
                <div className='best_seller_product_details_div'>
                    <Link to={`/singleproduct/${element.id}`} className='best_seller_product_title mb-0'>{element.title}</Link>
-                   <i className="fa-regular fa-star "></i>
-                   <i className="fa-regular fa-star "></i>
-                   <i className="fa-regular fa-star "></i>
-                   <i className="fa-regular fa-star "></i>
+                   <i className="fa-regular fa-star star8 "></i>
+                   <i className="fa-regular fa-star star8"></i>
+                   <i className="fa-regular fa-star star8 "></i>
+                   <i className="fa-regular fa-star star8 "></i>
+                   <i className="fa-regular fa-star  star8"></i>
                    <p className='best_seller_product_price'>${element.price}</p>
                </div>
            </div>
@@ -174,16 +175,16 @@ const Everything = () => {
                         
                     </div>
                 </div>
-                <div className='everything_right'>
-                    <div className='all_products_wrapper'>
+                <div className='everything_right' id='right'>
+                    <div id='all_products' className='all_products_wrapper'>
                     <div>
                         <Link to={'/'} className='link'>Home</Link>
-                        <span>/Store</span>
+                        <span className='store'>/Store</span>
                   </div>
                   
                   <div className='dropdown_main d-flex justify-content-between'>
                     <div>
-                        <p>Showing {FirstIndex}–{lastIndex} of {data.length} results</p>
+                        <p className='showing_result_para'>Showing {FirstIndex}–{lastIndex} of {data.length} results</p>
                     </div>
                     <div>
                         <select className='dropdown' onChange={((e)=>priceSort(e))}>
@@ -196,25 +197,25 @@ const Everything = () => {
                     <div className='products_main'>
                     {currentProducts.map((e)=>{
                        return <>
-                       <div className='item_div'>
-                            <div className='item_img_div'>
+                       <div id='item' className='item_div'>
+                            <div id='item_img' className='item_img_div'>
                                 <img className='item_img' loading='lazy' src={e.image}></img>
                             </div>
                             <div className='item_details'>
                                 <Link to={`/singleproduct/${e.id}`} className='item_name'><strong className='item_name mt-5'>{e.title}</strong></Link>
                                 <p className='item_category mt-2 mb-1 text-secondary mb-0'>{e.category}</p>
                                 <p className='item_price'>${e.price}</p>
-                                <div className='item_color_div'>
+                                <div id='color_div' className='item_color_div'>
                                 {e.color.map((ele)=>(
                                     <button className='item_btn_color' style={{backgroundColor:ele}}></button>
                                 ))}
                                     
                                 </div>
                                 <div className='mt-1'>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
+                                <i className="fa-regular fa-star star7"></i>
+                                <i className="fa-regular fa-star star7"></i>
+                                <i className="fa-regular fa-star star7"></i>
+                                <i className="fa-regular fa-star star7"></i>
                                 </div>
                             </div>
                         </div>

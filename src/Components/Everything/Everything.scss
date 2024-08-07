@@ -88,7 +88,7 @@ $blue: rgb(52, 153, 235);
     gap: 5px;
     width: 90%;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgb(161, 161, 161);
+    border-bottom: 1px solid rgb(223, 222, 222);
 }
 .best_seller_product_title{
 text-decoration: none;
@@ -114,7 +114,7 @@ list-style: none;
 }
 .link{
     text-decoration: none;
-    color: black;
+    color: rgba(98, 98, 98, 0.79);;
 }
 .dropdown{
     width: 190px;
@@ -158,6 +158,10 @@ list-style: none;
     height: 100%;
     transition: 0.3s linear all;
 }
+.item_price{
+    font-weight: 600;
+    font-size: small;
+   }
 .item_color_div{
     display: flex;
     justify-content: space-between;
@@ -169,4 +173,7 @@ list-style: none;
     border-radius: 50%;
     border: none;
     background-color: rgba(233, 38, 38, 0.919);
+}
+.store{
+    color: rgba(98, 98, 98, 0.79);
 }

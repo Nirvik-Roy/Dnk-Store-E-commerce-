@@ -15,6 +15,7 @@ const Navbar2 = () => {
   })
   ///////
 
+
   //calculating Total Price//
 
   let sum=0;

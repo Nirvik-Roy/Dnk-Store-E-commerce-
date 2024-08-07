@@ -28,7 +28,7 @@ const data2 = API_DATA
 
  //this one too//
   console.log(data)
-  setTimeout(()=>window.scroll(x,y),100)
+  
   
   
   const {id}=useParams()
@@ -46,7 +46,7 @@ const data2 = API_DATA
  }
 
  useEffect(()=>{
-  window.scrollTo({top:0,behavior:'instant'})
+  window.scrollTo({top:0,behavior:'smooth'})
   Single_product()
  },[])
 
@@ -123,7 +123,7 @@ pauseOnHover
 theme="light"
 />
      <Navbar2/>
-     <section className='singleProduct_section'>
+     <section id='body-container' className='singleProduct_section body-container'>
       <div className='single_product_main'>
         <div className='single_product_wrapper'>
 
