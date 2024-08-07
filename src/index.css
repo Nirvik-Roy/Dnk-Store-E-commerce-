@@ -24,6 +24,7 @@ html{
   width: 98%;
  margin-top: 10px;
  padding-left: 10px;
+ 
 }
 .showing_result_para{
   font-size: medium;
@@ -46,10 +47,11 @@ html{
 .item_div{
   width: 50%;
   margin-top: 35px;
+  
 }
 .item_img_div{
-  width: 120px;
-  height: 125px;
+  width: 90%;
+  height: 155px;
   margin-bottom: 10px !important;
 }
 .item_name{
@@ -87,7 +89,6 @@ html{
 }
 .range_filter_heading{
   font-size: larger;
-  
 }
 .filter_btn_main{
   width: 97%;
