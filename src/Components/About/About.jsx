@@ -21,12 +21,12 @@ const About = () => {
         <div className='d-flex justify-content-center about_div_main'>
             <div className='about_div_wrapper d-flex justify-content-center'>
                 <div className='left_wrapper'>
-                   <div>
+                   <div className='text-div'>
                     <h1 className='who_we_are_head'>Who We Are</h1>
-                    <p className='mb-2 mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,</p>
-                    <p className='mb-2'>luctus nec ullamcorper mattis, pulvinar dapibus leo. Nam nec tellus a</p>
-                    <p className='mb-2'>odio tincidunt auctor a ornare odio. Sed non mauris vitae erat</p>
-                    <p className='mb-2'>consequat auctor eu in elit.</p>
+                    <p className='mb-2 mt-5 about_para about_para1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,</p>
+                    <p className='mb-2 about_para'>luctus nec ullamcorper mattis, pulvinar dapibus leo. Nam nec tellus a</p>
+                    <p className='mb-2 about_para'>odio tincidunt auctor a ornare odio. Sed non mauris vitae erat</p>
+                    <p className='mb-2 about_para'>consequat auctor eu in elit.</p>
                  </div>
                 </div>
                 <div className='right_wrapper'>

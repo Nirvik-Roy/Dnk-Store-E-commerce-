@@ -9,11 +9,14 @@ import { addElement } from '../../Store/Slices/Slices'
 import Footer from '../Footer/Footer.jsx'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LazyLoad from 'react-lazy-load';
 const SingleProduct = () => {
+ 
   const [product,setproduct]=useState([])
   const [Color,setColor]=useState('')
   const [quantity,setQuantity]=useState(1)
   const [Index,setIndex]=useState(0)
+
 
   const [position,setposition]=useState({
     x: 0,
@@ -46,9 +49,10 @@ const data2 = API_DATA
  }
 
  useEffect(()=>{
-  window.scrollTo({top:0,behavior:'smooth'})
+  window.scrollTo({top:0,behavior:'instant'})
   Single_product()
- },[])
+
+ })
 
  const setIndexFun =(i)=>{
   setIndex(i)
@@ -133,7 +137,9 @@ theme="light"
             <div className='left_singleproduct_div'>
       
       <div className='singleProduct_image_div' onMouseMove={((e)=>mouseEnterZoom(e))} onMouseLeave={(()=>mouseLeaveZoom())}>
+    
         <img style={{width:'100%',height:'100%',objectFit:'cover',transformOrigin:`${position.x}px ${position.y}px`,transform:`scale(${position.scale})`,overflow:'hidden'}} className='single_product_img' loading='lazy' src={e.images[Index]} alt='product_img'></img>
+      
       </div>
   
       <div className='small_single_product_img_div_main'>

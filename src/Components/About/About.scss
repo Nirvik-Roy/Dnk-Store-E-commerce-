@@ -134,3 +134,58 @@
     width: 70%;
     font-size: larger;
 }
+@media only screen and (min-width:200px) and (max-width:767px){
+    .about_main{
+        padding-bottom: 10%;
+        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.364),rgba(12, 125, 212, 0.364)), url('../../assets/banner-04.jpg');
+        background-attachment: scroll;
+        background-size: contain;
+       
+    }
+    .about_head{
+        font-size: 10vw;
+        color: white;
+        margin-top: 100px;
+        transform: translateY(-100%);
+    }
+    .about_div_wrapper{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .left_wrapper{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .who_we_are_head{
+        text-align: center;
+    }
+    .who_we_are_head::before{
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 42%;
+        width: 18%;
+        height: 4px;
+        background-color: rgb(62, 132, 214);
+    }
+    .text-div{
+        width: 80%;
+    }
+    .about_para1{
+        margin-top: 20px !important;
+    }
+    .about_para{
+        margin-bottom: 0 !important;
+        font-size: 4.2vw;
+        line-height: 25px;
+    }
+    .right_wrapper{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
