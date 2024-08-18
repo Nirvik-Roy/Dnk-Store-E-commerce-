@@ -183,7 +183,7 @@ const Navbar2 = () => {
               <div className='cart_quantity_div cart_quantity_div2'>{data.length}</div>
               </div>
               <div><i class="fa-solid fa-user fa-user2"></i></div>
-              <div className='user' onClick={(()=>setmenu(true))}><i class="fa-solid fa-bars fa-lg"></i></div>
+              <div className='user' id='user2' onClick={(()=>setmenu(true))}><i class="fa-solid fa-bars fa-lg"></i></div>
             </div>
         </div>
         {modal&& <Modal/>}
