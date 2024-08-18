@@ -38,8 +38,10 @@ const About = () => {
 <div className='our_team_heading_div'>
  <h5 className='text-center our_team_head mb-3'>A Few Words About</h5>
  <h1 className='text-center mb-3'>Our Team</h1>
- <p  className='text-center mb-2'>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
- <p  className='text-center'>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+ <div className='our-team-para-div'>
+ <p  className='text-center mb-2 our-team-para'>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+ <p  className='text-center our-team-para'>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+ </div>
 </div>
 <div className='our_team_names_main d-flex justify-content-center'>
     <div className='our_team_names_wrapper '>

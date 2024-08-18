@@ -122,6 +122,8 @@ const Navbar = () => {
            <i class="fa-solid fa-circle-xmark fa-2xl"></i>
            </div>
            <i class="fa-solid fa-user fa-user3 "></i>
+
+<div className='nav-menu-links-height'>
            <div className='nav_menu_all_links_div mt-4'>
             <div className='nav_menu_link_div'>
               <NavLink to='/everything' onClick={(()=>setmenu(false))} style={{textDecoration:'none', color:'black'}}>EVERYTHING</NavLink>
@@ -140,6 +142,8 @@ const Navbar = () => {
             </div>
             <hr></hr>
            </div>
+
+</div>
 
            <div className='nav_menu_all_links_div mt-5'>
             <div className='nav_menu_link_div'>

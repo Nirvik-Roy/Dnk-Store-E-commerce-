@@ -188,4 +188,45 @@
         width: 100%;
         margin-top: 30px;
     }
+    .our-team-para{
+        font-size:4.4vw;
+    }
+    .our-team-para-div{
+        width: 80%;
+    }
+    .our_team_heading_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .our_team_names_wrapper{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 25%;
+    }
+    .our_team_name_div{
+        width: 70%;
+        margin-top: 20px;
+    }
+    .follow_us_main{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.407),rgba(0, 0, 0, 0.344)), url("../../assets/banner-05.jpg");
+        height: 300px;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .follow_us_wrapper{
+        width: 80%;
+        height: 250px;
+        background-color: rgb(246, 247, 249);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }

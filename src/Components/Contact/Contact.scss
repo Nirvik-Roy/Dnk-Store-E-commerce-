@@ -104,4 +104,51 @@
     font-weight: 600;
     margin-top: 20px;
 }
-
+@media only screen and (min-width:200px) and (max-width:767px){
+    .contact_main{
+        background-size: cover;
+        background-position:bottom;
+        background-attachment: scroll;
+        height: 230px;
+    }
+    .contact_head{
+        margin-top: 20px;
+        font-size: 9vw;
+    }
+    .cards_head1{
+        font-size: 5vw;
+    }
+    .cards_head{
+        font-size: 8.5vw;
+    }
+   .card_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+   }
+   .card_div{
+    width: 100%;
+    margin-top: 10px;
+   }
+   .contact_form_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+   }
+   .contact_left{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+.contact_right{
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+}
+.contact_left_about{
+    padding-top: 80px;
+}
+}

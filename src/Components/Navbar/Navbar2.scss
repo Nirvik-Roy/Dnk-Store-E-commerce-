@@ -77,6 +77,7 @@ $background-color:white;
     height: 100vh;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.288);
+    z-index: 1;
 }
 .modal_head{
     height: 100vh;
@@ -89,6 +90,7 @@ $background-color:white;
     position: fixed;
     cursor: pointer;
     animation: modal 0.3s linear 1;
+  
 }
 @keyframes modal {
     0%{
@@ -256,20 +258,20 @@ $background-color:white;
 }
 @media only screen and (min-width:200px) and (max-width:767px){
     .nav_main2{
-        height: 50px;
+        height: 60px;
         background-color: white;
     }
 .nav_cart_div2{
     margin-left: 0;
-    margin-top: -20px;
+    margin-top: -15px;
     position: relative;
     margin-right: 10px;
 }
 .total_price_nav2{
-    margin-top: -20px;
+    margin-top: -15px;
 }
 .nav_logo_div{
-    margin-top: -52px;
+    margin-top: -47px;
     width: 90px;
     height: 90px;
     padding-left: 10px;
@@ -314,5 +316,33 @@ $background-color:white;
     margin-bottom: 2px;
     font-weight: 600;
 }
-
+.nav-menu-links-height2{
+    height: 55%;
+}
+.nav_menu_link_div{
+    margin-top: 20px;
+}
+.user{
+    margin-right: -15px;
+    margin-top: -15px;
+    width: 50px;
+    height: 50px;
+}
+.modal_product_div{
+    overflow-y: scroll;
+    height: 70%;
+}
+.subtotal_div{
+    margin-top: 0;
+    height: 10%;
+}
+.modal_products_wrapper{
+   
+    height: 100%;
+    
+    overflow-y: scroll;
+}
+.modal_head{
+    overflow-y: scroll;
+}
 }

@@ -51,9 +51,8 @@ const data2 = API_DATA
  useEffect(()=>{
   window.scrollTo({top:0,behavior:'instant'})
   Single_product()
-
- })
-
+ 
+ },[])
  const setIndexFun =(i)=>{
   setIndex(i)
  }

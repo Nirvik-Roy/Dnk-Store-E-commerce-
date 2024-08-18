@@ -123,9 +123,6 @@
     font-weight: 600;
 }
 @media only screen and (min-width:200px) and (max-width:767px){
-    html{
-        min-height: 100vh;
-    }
     .featured_products_main{
         margin-top: -40px;
         display: flex;
@@ -137,7 +134,7 @@
         width: 50%;
     }
     .featured_img_div{
-           height: 130px;
+           height: 160px;
            display: flex;
            justify-content: start;
     }
